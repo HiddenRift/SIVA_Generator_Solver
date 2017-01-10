@@ -2,16 +2,21 @@
 
 
 def main():
-    # enter numbers top to bottom
+    # enter start and end values
     start_value = 0
     end_value = 10
+    # enter numbers top to bottom
     column1 = [1, 2, 3, -4, -5]
-    column2 = [1, 2, 3, -4, -5]
-    column3 = [1, 2, 3, -4, -5]
+    column2 = [1, 2, -2, -4, -5]
+    column3 = [1, 2, 3, 7, -5]
     column4 = [1, 2, 3, -4, -5]
     column5 = [1, 2, 3, -4, -5]
 
     test_column_values(1, column1)
+    test_column_values(2, column2)
+    test_column_values(3, column3)
+    test_column_values(4, column4)
+    test_column_values(5, column5)
 
     for num1 in column1:
         for num2 in column2:
@@ -26,10 +31,10 @@ def main():
 def test_column_values(column_number, column):
     for i in range(0, 3):
         if column[i] < 0:
-            print("Error in", str(column_number), ", Element", str(i))
+            print("Error in column", str(column_number), ", Element", str(i + 1))
     for i in range(3, 5):
         if column[i] >= 0:
-            print("Error in", str(column_number), ", Element", str(i))
+            print("Error in column", str(column_number), ", Element", str(i + 1))
 
 
 def calc_numbers(start, num1, num2, num3, num4, num5):
